@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from "react-router-dom"
-import CanvasJs from "./components/canvas/Canvas"
 import './index.css';
+import AppViews from './components/AppViews';
 
 ReactDOM.render(
     <Router>
-    <CanvasJs />
+    <AppViews />
     </Router>,
      document.getElementById('root')
 );
