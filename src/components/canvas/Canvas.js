@@ -45,8 +45,8 @@ const small = smallFunction()
 
 
 
-c.fillRect(medium, small, medium, medium);
-c.fillRect(big, medium , big, small);
+c.fillRect(small, small, small, small);
+c.fillRect(big, medium , big, medium);
 
 
 
