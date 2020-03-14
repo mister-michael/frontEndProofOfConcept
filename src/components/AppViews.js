@@ -5,6 +5,8 @@ import Canvas2 from "./canvas/Canvas2"
 
 const AppViews = props => {
 
+
+
   return (
     <React.Fragment>
       <Route
@@ -18,7 +20,8 @@ const AppViews = props => {
       exact
       path="/canvas2"
       render={props => {
-        return <Canvas2 {...props}/>
+        for (let i=0; i < 4; i++) {
+        return <Canvas2 {...props}/>}
       }}
       />
     </React.Fragment>

@@ -4,7 +4,7 @@ import "./Canvas.css"
 
 const Canvas2 = (props) => {
 
-  const [classList, setClassList] = useState({id: "", name: ""})
+  const [classList, setClassList] = useState({ id: "", name: "" })
 
   const getClass = (str, id) => {
     API.getWithId(str, id)
@@ -19,24 +19,31 @@ const Canvas2 = (props) => {
     return Math.floor(Math.random() * (max - min)) + min
   }
 
-  function GFG_Fun() { 
-    var x = r(0,200); 
-    var y = r(); 
-    var el = document.getElementById('GFG_DIV'); 
-    el.style.position = "absolute"; 
-    el.style.left = x + 'px'; 
-    el.style.top = y + 'px'; 
-    el_down.innerHTML =  
-      "Position of element is changed."; 
-} 
-
+  const randomXY = () => {
+    var x = r(5, 700);
+    var y = r(10, 500);
+    var el = document.getElementById('circle--1');
+    el.style.position = "absolute";
+    el.style.left = x + 'px';
+    el.style.top = y + 'px';
+  }
 
   useEffect(() => {
-    getClass("styles", 1);
-  })
+    setTimeout(() => {
+      getClass("styles", 1);
+      randomXY()
+    }, 50
+    )
+    // getClass("styles", 1);
+    //   randomXY()
+  }, [])
 
+  const htmlFunction = () => {
+    return (<div id="circle--1" className={classList.name} ></div>)
+  }
+    
   return (
-    <div id="circle--1" className={classList.name} ></div>
+    htmlFunction()
   )
 }
 
