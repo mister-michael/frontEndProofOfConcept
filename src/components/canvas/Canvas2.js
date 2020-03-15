@@ -22,7 +22,7 @@ const Canvas2 = (props) => {
   const randomXY = () => {
     var x = r(5, 700);
     var y = r(10, 500);
-    var el = document.getElementById('circle--1');
+    var el = document.getElementById(`circle--1`);
     el.style.position = "absolute";
     el.style.left = x + 'px';
     el.style.top = y + 'px';
@@ -38,9 +38,9 @@ const Canvas2 = (props) => {
   }, [])
 
   const htmlFunction = () => {
-    return (<div id="circle--1" className={`${classList.name} canvas`} ></div>)
+    return (<div id="circle--1" className={`${classList.name} canvas thing`} ></div>)
   }
-    
+
   return (
     htmlFunction()
   )
