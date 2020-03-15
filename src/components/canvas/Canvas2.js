@@ -32,14 +32,13 @@ const Canvas2 = (props) => {
     setTimeout(() => {
       getClass("styles", 1);
       randomXY()
-    }, 50
+      props.setIsTrue(true)
+    }, 300
     )
-    // getClass("styles", 1);
-    //   randomXY()
   }, [])
 
   const htmlFunction = () => {
-    return (<div id="circle--1" className={classList.name} ></div>)
+    return (<div id="circle--1" className={`${classList.name} canvas`} ></div>)
   }
     
   return (

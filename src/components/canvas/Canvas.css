@@ -1,9 +1,14 @@
+#container {position: absolute; }
+.canvas {position: relative; top: 0; left: 0; }
+#hidden {display: hidden}
+
 .red {
-  background-color: red;
+  background-color: #cccccc;
+  background-image: linear-gradient(red, yellow);
 }
 
 .circle {
-  height: 50px;
-  width: 50px;
+  height: 200px;
+  width: 200px;
   border-radius: 100%;
 }
